@@ -1,1 +1,76 @@
 /*  your css code here. If applicable */
+.scrolling-title-container {
+    overflow: hidden;
+}
+
+/* The title will be moved using the animation */
+.scrolling-title {
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    animation: scrollTitle 10s linear infinite; /* Adjust duration (10s) as needed */
+}
+
+/* Define the animation to move the title from right to left */
+@keyframes scrollTitle {
+    0% {
+        transform: translateX(100%); /* Start position outside the container (right) */
+    }
+    100% {
+        transform: translateX(-100%); /* End position outside the container (left) */
+    }
+}
+In this example, we use CSS animations to create a scrolling effect for the title. The .scrolling-title-container is set to hide any overflow, and the .scrolling-title element is moved from right to left using the @keyframes animation called scrollTitle. The animation is set to be infinite, so the title will keep scrolling continuously.
+
+You can adjust the animation's duration, container width, and title styles to fit your specific needs. Save the HTML and CSS code in separate files, or you can place the CSS inside the <style> tag within the <head> section of your HTML file.
+
+
+
+
+User
+Text "Welcome to Acciojobs!" must scroll from right to left in html
+ChatGPT
+To create a scrolling text effect where the text "Welcome to Acciojobs!" moves from right to left in HTML, you can use CSS animations. Here's an example of how to achieve this:
+
+HTML code:
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrolling Text</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div class="scrolling-text-container">
+        <h1 class="scrolling-text">Welcome to Acciojobs!</h1>
+    </div>
+</body>
+</html>
+CSS code (in a separate file named styles.css or you can include it inside the <style> tag in the <head> section):
+
+css
+Copy code
+/* The container will hide any overflow */
+.scrolling-text-container {
+    overflow: hidden;
+}
+
+/* The text will be moved using the animation */
+.scrolling-text {
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    animation: scrollText 10s linear infinite; /* Adjust duration (10s) as needed */
+}
+
+/* Define the animation to move the text from right to left */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%); /* Start position outside the container (right) */
+    }
+    100% {
+        transform: translateX(-100%); /* End position outside the container (left) */
+    }
+}
+
+
+
+
